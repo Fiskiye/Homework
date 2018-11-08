@@ -1,0 +1,56 @@
+print("yapmak istediğiniz işlemi seçiniz:")
+print("1- Toplama")
+print("2- Çıkarma")
+print("3- Çarpma")
+print("4- Bölme")
+print("5- Mod Alma")
+
+islem = input()
+
+i=0
+
+while islem != '5':
+
+    i += 1
+    print (i,end='')
+    sayi= input(". sayı girin:")
+
+    if sayi=="":
+        print("end")
+        break
+    else:
+        sayiListesi.append(sayi)
+sonuc= 0
+
+if int(islem)==1:
+    sonuc=0
+    for i in sayilistesi:
+        sonuc += int(i)
+    print(sonuc)
+
+elif int(islem)==2:
+    sonuc = int(sayiListesi[0])
+    del sayiListesi[0]
+    for i in sayiListesi:
+        sonuc -= int(i)
+    print(sonuc)
+
+elif int(islem)==3:
+    sonuc=int(sayiListesi[0])
+    del sayiListesi[0]
+    for i in sayiListesi:
+        sonuc *= int(i)
+    print(sonuc)
+
+elif int(islem)==4:
+    sonuc = int(sayiListesi[0])
+    del sayiListesi[0]
+    for i in sayiListesi:
+        sonuc /=int(i)
+    print(sonuc)
+
+elif int(islem)==5:
+   a= input("sayi giriniz:")
+   b= input("mod'u giriniz:")
+print("Sonuç :", end='')
+print(int(a) %int(b))
